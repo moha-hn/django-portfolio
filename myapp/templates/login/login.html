@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+  <head>
+    <title>Login</title>
+    <link href="{% static 'css/style2.css' %}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/logo.png' %}" />
+  </head>
+  <body>
+    <header>
+
+    <header>
+    <main>
+      
+      <div class="div">
+          <h1>LOGIN</h1>
+          <form  method="POST" class="form">
+              {% csrf_token %}
+              {{form.username}}
+              {{form.password}}
+              <input type="submit" value="Submit" class="btn">
+          </form> 
+      </div>
+    </main>
+
+  </body>
+  <script>
+    document.getElementById("id_username").placeholder = "Name..";
+    document.getElementById("id_password").placeholder = "Password..";
+  </script>
+<html>
